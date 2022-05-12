@@ -30,7 +30,7 @@ rename `.env_template` to `.env` and set the following variables:
 | Parameter       | Description                                                                        | Value               |
 | --------------- | ---------------------------------------------------------------------------------- | ------------------- |
 | `ALLOWED_HOSTS` | [link](https://docs.djangoproject.com/en/4.0/ref/settings/#allowed-hosts)          | "\*"                |
-| `APP_IP`        | aplication host                                                                    | 0.0.0.0             |
+| `APP_HOST`      | aplication host                                                                    | 0.0.0.0             |
 | `APP_PORT`      | application port                                                                   | 8000                |
 | `DB_HOST`       | database host                                                                      | db                  |
 | `DB_NAME`       | database name                                                                      | earthdaily          |
@@ -65,7 +65,8 @@ make migrate
 make up
 ```
 
-Please check the project's `Makefile` for more on setup commands.
+Please check the project's `Makefile` for more on setup commands. Also, at this
+point you should be able to access the documentation at `$APP_HOST:$APP_PORT/docs`.
 
 ### Testing
 

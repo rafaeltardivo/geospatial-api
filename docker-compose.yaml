@@ -17,7 +17,7 @@ services:
     container_name: "geospatial-api"
     build: .
     working_dir: /app/app
-    command: bash -c "../wait_for_db.sh $ ${DB_HOST} ${DB_PORT} && python manage.py runserver ${APP_IP}:${APP_PORT}"
+    command: bash -c "../wait_for_db.sh $ ${DB_HOST} ${DB_PORT} && python manage.py runserver ${APP_HOST}:${APP_PORT}"
     volumes:
       - .:/app
     ports:
