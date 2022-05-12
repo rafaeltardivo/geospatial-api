@@ -8,3 +8,6 @@ class ATM(models.Model):
     address = models.CharField(max_length=255)
     provider = models.CharField(max_length=255)
     geometry = gis_models.PointField()
+
+    def __str__(self):
+        return f"{self.provider} - {self.address}"
