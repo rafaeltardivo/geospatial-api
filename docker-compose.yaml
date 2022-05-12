@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  db:
+    container_name: "db"
+    image: postgis/postgis
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+    volumes:
+    - data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_NAME=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PWD}
+    networks:
+      - app-network
+  geospatial-api:
+    container_name: "geospatial-api"
+    build: .
+    working_dir: /app/app
+    command: bash -c "../wait_for_db.sh $ ${DB_HOST} ${DB_PORT} && python manage.py runserver ${APP_IP}:${APP_PORT}"
+    volumes:
+      - .:/app
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    networks:
+      - app-network
+networks:
+    app-network:
+        driver: bridge
+volumes:
+  data:
