@@ -66,7 +66,7 @@ make up
 ```
 
 Please check the project's `Makefile` for more on setup commands. Also, at this
-point you should be able to access the documentation at `$APP_HOST:$APP_PORT/docs`.
+point you should be able to access the documentation at http://localhost:8000/docs.
 
 ### Testing
 
@@ -91,5 +91,5 @@ to install the dependencies. After that, execute `pre-commit install` to prepare
 
 ## Final considerations
 
-- This is project is not production ready.
+- This is project is not production ready;
 - I leveraged the "batteries included" nature of Django and Django Rest Framework to meet the project's deadline. This is also true for choosing unittest over pytest and many other stack tradeoffs.
