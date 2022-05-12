@@ -2,9 +2,9 @@
 
 API for atm create/list actions. All atms should contain the following attributes:
 
-- provider: `str`
-- adddress: `str`
-- geometry ([point](https://docs.djangoproject.com/en/4.0/ref/contrib/gis/geos/#django.contrib.gis.geos.Point))
+- provider: `str`;
+- adddress: `str`;
+- geometry ([point](https://docs.djangoproject.com/en/4.0/ref/contrib/gis/geos/#django.contrib.gis.geos.Point)).
 
 For more information, please refer to the official documentation at `/docs`
 
@@ -12,7 +12,6 @@ For more information, please refer to the official documentation at `/docs`
 
 - [Python](https://www.python.org/) 3.10
 - [Django + GeoDjango](https://docs.djangoproject.com/en/4.0/ref/contrib/gis/) v4.0
-
 - [Django REST Framework GIS](https://pypi.org/project/djangorestframework-gis/0.3/) v1.0
 - [Factory Boy](https://factoryboy.readthedocs.io/en/stable/) 2.11
 - [Coverage](https://coverage.readthedocs.io/en/) 4.5.1
