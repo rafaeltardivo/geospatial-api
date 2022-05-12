@@ -5,7 +5,7 @@ from .serializers import ATMSerializer
 
 
 class ATMView(ListCreateAPIView):
-    """ATM List/Create view."""
+    """ATM view."""
 
     queryset = ATM.objects.all()
     serializer_class = ATMSerializer

@@ -1,6 +1,7 @@
 coverage==4.5.1
 Django==4.0.4
 djangorestframework-gis==1.0
+drf-yasg==1.20.0
 factory-boy==2.11.1
 pre-commit==2.15.0
 psycopg2-binary==2.9.3
